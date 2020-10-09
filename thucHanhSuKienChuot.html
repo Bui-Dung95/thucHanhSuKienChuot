@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thucHanhSuKienChuot</title>
+</head>
+<body>
+<form >
+
+    <img id="myImage" src="https://th.bing.com/th/id/OIP.TTQNklAfVhn7C8hOLNcdDQAAAA?w=169&h=180&c=7&o=5&dpr=1.25&pid=1.7" alt="" style="width: 300px">
+    <p>Click button below to move the image to right </p>
+    <input type="button" value="Click Me" onclick="moveRight()" />
+</form>
+    <script>
+        let anh = null;
+        anh = document.getElementById('myImage');
+        function init(){
+            anh = document.getElementById('myImage');
+            anh.style.position = 'relative';
+            anh.style.left ='0px';
+        }
+        function moveRight() {
+            anh.style.left = parseInt(anh.style.left) + 50 + 'px';
+        }
+        window.onload = init;
+    </script>
+
+</body>
+</html>
